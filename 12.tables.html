@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Tables</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+		#myTable2 tr{
+			border-bottom: 2px solid grey;
+		}
+
+		#myTable3 th {
+			border-bottom: 2px solid navy;
+		}
+
+		#myTable3 tr:nth-child(even) {
+			background-color: azure;
+		}
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Tables</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>Responsive Tables</h2>
+
+				<p>Responsive design is useful when you want the content of your mobile web page to respond to the users device, such as its screen size and orientation.</p>
+
+				<p>With a simple class name, jQuery Mobile is aware of the users available screen size and automatically resizes itself to show content that is relevent for that particular user.</p>
+
+				<p>Responsive tables allow us to display a large set of tabular data that will look attractive for both mobiles and desktop.</p>
+
+				<p>There are two types of responsive tables: <b>reflow</b> and <b>column toggle.</b></p>
+
+				<hr />
+
+				<h2>Reflow Table</h2>
+
+				<p>The reflow mode positions the table data horizontally until it reaches a minimum size, then all rows are grouped together vertically.</p>
+
+				<p>Create a table, add the <b>data-role="table"</b> attribute, and a class of <b>"ui-responsive"</b> on the table-element.</p>
+
+				<h3>Example: reflow table</h3>
+
+				<table data-role="table" class="ui-responsive w3-table-all">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Joe</td>
+						<td>1979</td>
+					</tr>
+					<tr>
+						<td>Mike</td>
+						<td>1977</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<div class="w3-panel w3-leftbar w3-border-red w3-pale-blue">
+					<p>For the responsive table to work correctly, you MUST include the thead-element (for th) and the tbody-element (for td).</p>
+					<p>Do NOT use row-span or col-span attributes; they are not supported.</p>
+				</div>
+
+				<hr />
+
+				<h2>Column Toggle Table</h2>
+
+				<p>The "column toggle" mode will hide columns when there is not enough width to display the data.</p>
+
+				<p>To create a column toggle table, add the following to the table element:</p>
+
+				<pre><code>
+			/table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable"/
+				</code></pre>
+
+				<p>By default, jQuery Mobile will hide columns from the right side of the table. However, you are allowed to specify which column that should be hidden or shown in a specific order. Add the <b>data-priority</b> attribute to the table's header (<th>) and specify a number between 1 (highest priority) to 6 (lowest priority) for each th-element:</p>
+
+				<strong><p>If you don't specify a priority for a column, the column will be persistent and not available for hiding.</p></strong>
+
+				<h3>Example: column toggle table</h3>
+
+				<table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Show/Hide" id="myTable">
+					<thead>
+						<tr>
+							<th data-priority="3">Name</th>
+							<th data-priority="2">Date</th>
+							<th data-priority="1">Color</th>
+							<th data-priority="4">ID</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Jack</td>
+							<td>1989</td>
+							<td>Black</td>
+							<td>#45</td>
+						</tr>
+
+						<tr>
+							<td>John</td>
+							<td>1943</td>
+							<td>Blue</td>
+							<td>#33</td>
+						</tr>
+
+						<tr>
+							<td>Lynda</td>
+							<td>1967</td>
+							<td>Brown</td>
+							<td>#72</td>
+						</tr>
+
+						<tr>
+							<td>Lacy</td>
+							<td>1988</td>
+							<td>Green</td>
+							<td>#63</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>To change the toggle table button text, use the <b>data-column-btn-text</b> attribute.</p>
+
+				<h3>Example: toggle button text (see above)</h3>
+
+				<hr />
+
+				<h2>Styling Tables</h2>
+
+				<p>Use the <b>"ui-shadow"</b> class to add shadows to the table:</p>
+
+				<h3>Example: table with shadows</h3>
+
+				<table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" data-column-btn-text="Show/Hide" id="myTable">
+					<thead>
+						<tr>
+							<th data-priority="3">Name</th>
+							<th data-priority="2">Date</th>
+							<th data-priority="1">Color</th>
+							<th data-priority="4">ID</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Jack</td>
+							<td>1989</td>
+							<td>Black</td>
+							<td>#45</td>
+						</tr>
+
+						<tr>
+							<td>John</td>
+							<td>1943</td>
+							<td>Blue</td>
+							<td>#33</td>
+						</tr>
+
+						<tr>
+							<td>Lynda</td>
+							<td>1967</td>
+							<td>Brown</td>
+							<td>#72</td>
+						</tr>
+
+						<tr>
+							<td>Lacy</td>
+							<td>1988</td>
+							<td>Green</td>
+							<td>#63</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<hr />
+
+				<p>For further table styling use CSS:</p>
+
+				<h3>Example: bottom border on rows</h3>
+
+				<table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Show/Hide" id="myTable2">
+					<thead>
+						<tr>
+							<th data-priority="3">Name</th>
+							<th data-priority="2">Date</th>
+							<th data-priority="1">Color</th>
+							<th data-priority="4">ID</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Jack</td>
+							<td>1989</td>
+							<td>Black</td>
+							<td>#45</td>
+						</tr>
+
+						<tr>
+							<td>John</td>
+							<td>1943</td>
+							<td>Blue</td>
+							<td>#33</td>
+						</tr>
+
+						<tr>
+							<td>Lynda</td>
+							<td>1967</td>
+							<td>Brown</td>
+							<td>#72</td>
+						</tr>
+
+						<tr>
+							<td>Lacy</td>
+							<td>1988</td>
+							<td>Green</td>
+							<td>#63</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<hr />
+
+				<h3>Example: bottom border on th-elements and background color to even table rows:</h3>
+
+				<table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Show/Hide" id="myTable3">
+					<thead>
+						<tr>
+							<th data-priority="3">Name</th>
+							<th data-priority="2">Date</th>
+							<th data-priority="1">Color</th>
+							<th data-priority="4">ID</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Jack</td>
+							<td>1989</td>
+							<td>Black</td>
+							<td>#45</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>1943</td>
+							<td>Blue</td>
+							<td>#33</td>
+						</tr>
+						<tr>
+							<td>Lynda</td>
+							<td>1967</td>
+							<td>Brown</td>
+							<td>#72</td>
+						</tr>
+						<tr>
+							<td>Lacy</td>
+							<td>1988</td>
+							<td>Green</td>
+							<td>#63</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

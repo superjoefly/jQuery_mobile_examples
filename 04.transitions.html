@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title></title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>This is the header (data-role="header")</h1>
+				<h1>jQuery Mobile Transitions</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>This is the main content area! (data-role="main" class="ui-content")</p>
+
+				<p>jQuery Mobile includes CSS3 effects that let you choose the way a page should open.</p>
+
+				<h2>jQuery Mobile Transition Effects</h2>
+
+				<p>jQuery Mobile has a variety of effects for how to transition from one page to the next.</p>
+
+				<p><strong>Note:</strong> To achieve the transition effect, the browser must support CSS3 3D Transforms.</p>
+
+				<p>The transition effect can be applied to any link or form submission by using the data-transition attribute:</p>
+
+				<pre><code>
+		/a href="#anylink" data-transition="slide">Slide to Page Two /a
+				</code></pre>
+
+				<p>The following available transitions can be used with the data-transition attribute for both pages and dialogs:</p>
+
+				<ul>
+					<li><b>fade:</b> default; fades to next page</li>
+					<li><b>flip:</b> flips to next page from back to front</li>
+					<li><b>flow:</b> throws the current page away and comes in with the next page</li>
+					<li><b>pop:</b> goes to the next page like a pop-up window</li>
+					<li><b>slide:</b> slides to the next page from right to left</li>
+					<li><b>slidefade:</b> slides from right to left and fades in the next page</li>
+					<li><b>slideup:</b> slides to the next page from bottom to top</li>
+					<li><b>slidedown:</b> slides to the next page from top to bottom</li>
+					<li><b>turn:</b> turns to the next page</li>
+					<li><b>none:</b> no transition effect</li>
+				</ul>
+
+				<p><strong>The fading effect is default on all links in jQuery Mobile (if the browser supports it).</strong></p>
+
+				<p><strong>Tip:</strong> All effects above also support reverse/backward actions, e.g. if you want the page to slide from left to right, instead of right to left, use the data-direction attribute with value "reverse".</p>
+			</div>
+
+			<a href="#pagetwo" data-transition="slide">Slide to Page 2</a>
+			<pre><code>
+		data-transition="slide"
+			</code></pre>
+
+			<div data-role="footer">
+				<h1>Footer Text Goes Here! (data-role="footer")</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+				<a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page 1 (reverse)</a>
+				<pre><code>
+			data-transition="slide" data-direction="reverse"
+				</code></pre>
+				<br /><br />
+
+				<a href="#pagethree" data-transition="flip">Flip to Page Three</a>
+				<pre><code>
+			data-transition="flip"
+				</code></pre>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="pagethree">
+			<div data-role="header">
+				<h1>This is Page 3!</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>This is the main content of the page!</p>
+				<a href="#pagetwo" data-transition="turn" data-direction="reverse">Turn Back to Page Two (reverse)</a>
+				<pre><code>
+			data-transition="turn" data-direction="reverse"
+				</code></pre>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Information</h1>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</body>
+
+</html>

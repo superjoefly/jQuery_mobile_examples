@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Grids</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+		.ui-block-a, .ui-block-b, .ui-block-c {
+			background-color: cornflowerblue;
+			border: 2px solid black;
+			height: 300px;
+			text-align: center;
+			padding: 25px;
+		}
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Grids</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile - Layout Grids</h2>
+
+				<p>jQuery Mobile provides a set of CSS-based column layouts. However, column layouts are not generally recommended on a mobile device, due to the mobile's screen width.</p>
+
+				<p>But, there are times you may want to poisiton smaller elements, like buttons or nav tabs, side-by-side, as if it were in a table. Then, columns are perfect.</p>
+
+				<p>Columns in a grid are of equal width (and 100% wide in total), with no border, background, margin or padding.</p>
+
+				<p>There are 5 layout grids that can be used:</p>
+
+				<table data-role="table" data-mode="columntoggle" class="ui-responsive w3-table-all" id="myTable">
+					<thead>
+						<tr>
+							<th data-priority="3">Grid Class</th>
+							<th data-priority="2">Columns</th>
+							<th data-priority="4">Column Widths (%)</th>
+							<th data-priority="1">Corresponds To</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ui-grid-solo</td>
+							<td>1</td>
+							<td>100</td>
+							<td>ui-block-a</td>
+						</tr>
+						<tr>
+							<td>ui-grid-a</td>
+							<td>2</td>
+							<td>50/50</td>
+							<td>ui-block-a|b</td>
+						</tr>
+						<tr>
+							<td>ui-grid-b</td>
+							<td>3</td>
+							<td>33/33/33</td>
+							<td>ui-block-a|b|c</td>
+						</tr>
+						<tr>
+							<td>ui-grid-c</td>
+							<td>4</td>
+							<td>25/25/25/25</td>
+							<td>ui-block-a|b|c|d</td>
+						</tr>
+						<tr>
+							<td>ui-grid-d</td>
+							<td>5</td>
+							<td>20/20/20/20/20</td>
+							<td>ui-block-a|b|c|d|e</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="w3-panel w3-leftbar w3-border-red w3-pale-blue">
+					<p>Within the column container, child elements can have the class <b>ui-block-a|b|c|d|e</b> depending on the number of columns. The columns will float side by side.</p>
+
+					<p><b>Example 1:</b> for the <b>ui-grid-a</b> class (which is a two column layout), you must specify two child elements: <b>ui-block-a, ui-block-b.</b></p>
+
+					<p><b>Example 2:</b> for <b>ui-grid-b</b> (three column layout), add three child elements: <b>ui-block-a, ui-block-b, ui-block-c.</b></p>
+				</div>
+
+				<h3>Example: 3 column grid (ui-grid-b)</h3>
+
+				<div class="ui-grid-b ui-responsive">
+					<div class="ui-block-a">
+						<a href="#" class="ui-btn ui-corner-all ui-shadow">First</a><br />
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-corner-all ui-shadow">Second</a><br />
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+					</div>
+					<div class="ui-block-c">
+						<a href="#" class="ui-btn ui-corner-all ui-shadow">Third</a><br />
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+					</div>
+					<div class="ui-block-a">
+						<a href="#" class="ui-btn ui-corner-all ui-shadow">First</a><br />
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-corner-all ui-shadow">Second</a><br />
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+					</div>
+					<div class="ui-block-c">
+						<a href="#" class="ui-btn ui-corner-all ui-shadow">Third</a><br />
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+						<p>This is some text...</p>
+					</div>
+				</div>
+
+				<hr />
+
+				<h2>Customize Grids</h2>
+
+				<p>You can customize your column blocks by using CSS.</p>
+
+				<h3>Example: customize grid (see above example)</h3>
+
+				<p>You can also customize blocks by using inline styles.</p>
+
+				<hr />
+
+				<h2>Multiple Rows</h2>
+
+				<p>It is also possible to have multiple rows inside your columns.</p>
+
+				<p><strong>Note:</strong> the <b>ui-block-a</b> class will always create a new line.</p>
+
+				<h3>Example: adding a new row (ui-block-a) (see above example!)</h3>
+
+				<hr />
+
+				<h2>Responsive Grids</h2>
+
+				<p>On small screens, it is not recommended to have too many buttons with text side-by-side on one row - the text might get shortened.</p>
+
+				<p><strong>For responsive grids, add the ui-responsive class to the container.</strong></p>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

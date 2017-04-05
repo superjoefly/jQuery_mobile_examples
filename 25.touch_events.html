@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Touch Events</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+		#div1 {
+			height: 100px;
+			width: 200px;
+			background-color: red;
+			color: white;
+		}
+
+		#div2 {
+			height: 100px;
+			width: 200px;
+			background-color: blue;
+			color: white;
+		}
+
+		#div3 {
+			height: 100px;
+			width: 200px;
+			border: 2px solid navy;
+		}
+
+		#div4 {
+			height: 100px;
+			width: 200px;
+			border: 2px solid red;
+		}
+
+		#div5 {
+			height: 100px;
+			width: 200px;
+			background-color: yellow;
+		}
+
+
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Touch Events</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Touch events are triggered when the user touches the screen (page).</p>
+
+				<p><strong>Touch events also work on desktop computers: tap and swipe with your mouse!</strong></p>
+
+				<hr />
+
+				<h2>jQuery Mobile Tap</h2>
+
+				<p>The tap event is triggered when a user taps an element.</p>
+
+				<p>The following example says: when a tap event fires on a p-element, hide the current p-element.</p>
+
+				<h3>Example: hiding an element (tap)</h3>
+
+				<div id="div1">
+					<p>Tap to hide this div!</p>
+				</div>
+
+				<hr />
+
+				<h2>jQuery Mobile Taphold</h2>
+
+				<p>The taphold event is triggered when the user taps on an element and holds for one second.</p>
+
+				<h3>Example: hide element (taphold)</h3>
+
+				<div id="div2">
+					<p>Tap and hold for one second to hide this div.</p>
+				</div>
+
+				<hr />
+
+				<h2>jQuery Mobile Swipe</h2>
+
+				<p>The swipe event is triggered when the user swipes over an element horizontally by more than 30px.</p>
+
+				<h3>Example: change text (swipe)</h3>
+
+				<div id="div3">
+					<span id="span1" style="color: red"></span>
+				</div>
+
+				<hr />
+
+				<h2>jQuery Mobile Swipeleft</h2>
+
+				<p>The swipeleft event is triggered when the user swipes over an element in the left direction by more than 30px.</p>
+
+				<div id="div4">
+					<span id="span2" style="color: blue"></span>
+				</div>
+
+				<hr />
+
+				<h2>jQuery Mobile Swiperight</h2>
+
+				<p>The swiperight event is triggered when the user swipes over an element in the right direction by more than 30px.</p>
+
+				<h3>Example: change background color (swiperight)</h3>
+
+				<div id="div5">
+					Swiperight to change background color!
+				</div>
+
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+		<script>
+		//hide on tap
+		$("#div1").on("tap", function() {
+			$(this).hide();
+		});
+
+		//hide on taphold
+		$("#div2").on("taphold", function() {
+			$(this).hide();
+		});
+
+		//change text with swipe
+		$("#div3").on("swipe", function() {
+			$("#span1").text("Swipe Detected!");
+		});
+
+		//change text with left swipe
+		$("#div4").on("swipeleft", function() {
+			$("#span2").text("You swiped left!");
+		});
+
+		//change background color with right swipe
+		$("#div5").on("swiperight", function() {
+			$("#div5").css("background-color", "green");
+		});
+		</script>
+
+
+	</body>
+
+</html>

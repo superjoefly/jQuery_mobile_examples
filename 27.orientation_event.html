@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Orientation Event</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Orientation Event</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>The orientation event is triggered when the user rotates the mobile device vertically or horizontally.</p>
+
+				<p>To use the orientation change event, attach it to the window object:</p>
+
+<pre><code>
+$(window).on("orientationchange", function() {
+	alert("The orientation has chaged!");
+});
+</code></pre>
+
+				<p>The callback function can have one argument, the event object, which returns the orientation of the mobile device: "portrait" (the device is held in a vertical position) or "landscape" (the device is held in a horizontal position).</p>
+
+				<h3>Example:</h3>
+
+<pre><code>
+$(window).on("orientationchange", function(event) {
+	alert("Orientation is: " + event.orientation);
+});
+</code></pre>
+
+				<p>Because the orientationchange event is bound to the window object, we can use the window.orientation property to, for example, set different styles to distinguish between portrait and landscape view.</p>
+
+<pre><code>
+$(window).on("orientationchange", function() {
+	if(window.orientation == 0)			//Portrait
+	{
+		$("p").css({
+			"background-color":"yellow",
+			"font-size":"300%"
+		});
+	}
+		else		//Landscape
+		{
+			$("p").css({
+				"background-color":"pink",
+				"font-size":"200%"
+			});
+		}
+});
+</code></pre>
+
+				<p><b>The window.orientation property returns 0 for portrait, and 90 or -90 for landscape view.</b></p>
+
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

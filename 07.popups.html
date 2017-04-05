@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Popups</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Popups</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile Popups</h2>
+				<p>Popups are similar to dialogs, in that they both overlay a part of a page. A popup box can be useful when you want to display small text, photos, maps, or other content.</p>
+
+				<p>To create a popup, start with an a-element and a div-element. Add the <b>data-rel="popup"</b> attribute to the a-element and the <b>data-role="popup"</b> attribute to the div-element. Then, specify an id for the div-element, and set the href of the a-element to match the specified id. The content inside div is the actual popup content when a user clicks on the link.</p>
+
+				<p><strong>Note:</strong> the popup div must be within the same page as the link.</p>
+
+				<h3>Example: popup</h3>
+
+				<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+
+				<div data-role="popup" id="myPopup">
+					<p>This is a simple popup!</p>
+				</div>
+
+				<p>If you want some extra padding and margin in your popup box, add the <b>"ui-content"</b> class to the div-element.</p>
+
+				<h3>Example: popup with added padding and margin</h3>
+
+				<a href="#myPopup2" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+
+				<div data-role="popup" id="myPopup2" class="ui-content">
+					<p>Popup with added padding and margin!</p>
+				</div>
+
+				<hr />
+
+				<h2>Closing Popups</h2>
+
+				<p>By default, popups can be closed by clicking outside the popup box or by pressing the "ESC" key. To make the popup uncloseable, use <b>data-dismissible="false".</b> You can also add a close button to the popup placed to the right or left. To do so, add a button link with the <b>data-rel="back"</b> attribute into the popup container, and position the button by CSS classes.</p>
+
+				<h3>Example: popup with right aligned close button</h3>
+
+				<a href="#myPopup3" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+
+				<div data-role="popup" id="myPopup3" class="ui-content">
+		      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+					<p>This is a popup with a close button!</p>
+				</div>
+
+				<hr />
+
+				<h2>Positioning Popups</h2>
+
+				<p>By default, popups will appear directly over the clicked element. To control the position of the popup, use the <b>data-position-to</b> attribute on the link that is used to open the popup.</p>
+
+				<p>There are three ways of positioning the popup:</p>
+
+				<table class="w3-table-all">
+					<tr>
+						<th>Attribute Value</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>data-position-to="window"</td>
+						<td>centered within the window</td>
+					</tr>
+					<tr>
+						<td>data-position-to="#myID"</td>
+						<td>positioned over the element with a specific #id</td>
+					</tr>
+					<tr>
+						<td>data-position-to="origin"</td>
+						<td>default (positioned directly over the clicked element)</td>
+					</tr>
+				</table>
+
+				<h3>Example: centered withing the window</h3>
+
+				<a href="#myPopup4" data-rel="popup" class="ui-btn" data-position-to="window">Show Centered Popup</a>
+
+				<div data-role="popup" id="myPopup4" class="ui-content">
+					<p>This popup is cented to the window!</p>
+				</div>
+
+				<hr />
+
+				<h2>Transitions</h2>
+
+				<p>You can apply transition effects to pupups using the <b>data-transition="value"</b> attribute on the link.</p>
+
+				<h3>Example: popup with transition (flip)</h3>
+
+				<a href="#myPopup5" data-rel="popup" class="ui-btn" data-transition="flip">Open Popup</a>
+
+				<div data-role="popup" id="myPopup5" class="ui-content">
+					<p>Popup with Flip Transition!</p>
+				</div>
+
+				<hr />
+
+				<h2>Popup Arrows</h2>
+
+				<p>To add an arrow to the popup's border, use the <b>data-arrow</b> attribute, and specify the value "l" (left), "t" (top), "r" (right), or "b" (bottom).</p>
+
+				<h3>Example: bottom arrow</h3>
+
+				<a href="#myPopup6" data-rel="popup" class="ui-btn">Open Popup</a>
+
+				<div data-role="popup" id="myPopup6" class="ui-content" data-arrow="b">
+					<p>Popup with bottom arrow!</p>
+				</div>
+
+				<hr />
+
+				<h2>Popup Dialogs</h2>
+
+				<p>You can add standard dialog markup into a popup (header, content, footer markup)</p>
+
+				<h3>Example: Popup with Dialog Markup</h3>
+
+				<a href="#myPopup7" data-rel="popup" class="ui-btn">Open Dialog Popup</a>
+
+				<div data-role="popup" id="myPopup7">
+					<div data-role="header">
+						<h1>Header Content</h1>
+					</div>
+					<div data-role="main" class="ui-content">
+						<p>Main Page Conent</p>
+					</div>
+					<div data-role="footer">
+						<h1>Footer Content</h1>
+					</div>
+				</div>
+
+				<hr />
+
+				<h2>Popup Photos</h2>
+
+				<p>You can also display images in a popup:</p>
+
+				<h3>Example: Popup Image</h3>
+
+				<a href="#myPopup8" data-rel="popup" data-position-to="window">
+				<img src="images/moose.jpg" alt="moose" style="width: 150px" /></a>
+
+				<div data-role="popup" id="myPopup8">
+					<img src="images/moose.jpg" alt="moose" style="width: 300px" />
+				</div>
+
+				<p><strong>Note:</strong> this is better used for just a few images...not many.</p>
+
+				<hr />
+
+				<h2>Popup Overlay</h2>
+
+				<p>You can control the background color behind the popup (the page itself) with the <b>data-overlay-theme</b> attribute.</p>
+
+				<p>By default, the overlay is transparent. Use <b>data-overlay-theme="a"</b> to add a light overlay, and <b>data-overlay-theme="b"</b> to add a dark overlay:</p>
+
+				<h3>Example: dark overlay</h3>
+
+				<a href="#myPopup9" class="w3-btn" data-rel="popup" data-position-to="window">Show Popup</a>
+
+				<div data-role="popup" id="myPopup9" data-overlay-theme="b">
+					<p>This popup has a dark "b" overlay theme!</p>
+				</div>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>jQuery Mobile - Popups</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

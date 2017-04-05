@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Form Input Elements</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Form Input Elements</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h3>jQuery Mobile Text Inputs</h3>
+
+				<p>Input fields are coded with standard HTML elements, and jQuery Mobile will style them to look attractive and easy-to-use for mobile devices. You can also use the HTML5 input-types:</p>
+
+				<h3>Example: form input</h3>
+
+				<form method="post" action="demoform.asp">
+					<div class="ui-field-contain">
+						<label for="fullname">Full Name:</label>
+						<input type="text" name="fullname" id="fullname" placeholder="Your Name..." />
+
+						<label for="bday">Date of Birth:</label>
+						<input type="date" name="bday" id="bday" />
+
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="Your Email..."
+					</div>
+				</form>
+
+				<hr />
+
+				<h2>Text Area</h2>
+
+				<p>Use "textarea" for multi-line text inputs.</p>
+
+				<p><strong>Note:</strong> The text area will automatically grow to fit new lines as you type some text.</p>
+
+				<h3>Example: text area</h3>
+
+				<form method="post" action="demoform.asp">
+					<label for="info">Additional Info</label>
+					<textarea name="addinfo" id="info"></textarea>
+				</form>
+
+				<hr />
+
+				<h2>Search Input</h2>
+
+				<p>The <b>input type="search"</b> is new in HTML5, and defines a text field for entering a search.</p>
+
+				<form method="post" action="demoform.asp">
+					<label for="search">Search:</label>
+					<input type="search" name="search" id="search" />
+				</form>
+
+				<hr />
+
+				<h2>Radio Buttons</h2>
+
+				<p>Radio buttons are used when a user can select only one of a limited number of choices.</p>
+
+				<p>To create a set of radio buttons, add an input with <b>type="radio"</b> and a cooresponding label. Wrap the radio buttons in a <b>fieldset</b> element. You can also add a <b>legend</b> element to define a cation for the fieldset.</p>
+
+				<p><strong>Tip:</strong> Use the <b>data-role="controlgroup"</b> to group the buttons together.</p>
+
+				<h3>Example: radio buttons</h3>
+
+				<form method="post" action="demoform.asp">
+					<fieldset data-role="controlgroup">
+						<legend>Choose your gender:</legend>
+						<label for="male">Male</label>
+						<input type="radio" name="gender" id="male" value="male" />
+
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="female" value="female" />
+					</fieldset>
+					<input type="submit" data-inline="true" value="Submit"
+				</form>
+
+				<hr />
+
+				<h2>Checkboxes</h2>
+
+				<p>Checkboxes are used when a user can select one or more options of a limited number of choices.</p>
+
+				<form method="post" action="demoform.asp">
+				  <fieldset data-role="controlgroup">
+				    <legend>Choose as many favorite colors as you'd like:</legend>
+				      <label for="red">Red</label>
+				      <input type="checkbox" name="favcolor" id="red" value="red">
+				      <label for="green">Green</label>
+				      <input type="checkbox" name="favcolor" id="green" value="green">
+				      <label for="blue">Blue</label>
+				      <input type="checkbox" name="favcolor" id="blue" value="blue">
+				  </fieldset>
+				</form>
+
+				<hr />
+
+				<h2>More options:</h2>
+
+				<p>To group radio buttons or checkboxes horizontally, use the <b>data-type="horizontal"</b> attribute.</p>
+
+				<h3>Example code: horizontal buttons</h3>
+
+				<pre><code>
+		/fieldset data-role="controlgroup" data-type="horizontal"/
+				</code></pre>
+
+				<p>You can also wrap a field container around the fieldset element.</p>
+
+				<h3>Example: ui-field-contain</h3>
+
+				<pre><code>
+		/div class="ui-field-container"/
+			/fieldset data-role="controlgroup"/
+				/legend/ Chose your gender.../legend/
+			/fieldset
+		/div
+				</code></pre>
+
+				<hr />
+
+				<p>If you want one of the buttons to be pre-selected, use the HTML input "checked" attribute:</p>
+
+				<pre><code>
+		/input type="radio" checked /
+		/input type="checkbox" checked /
+				</code></pre>
+
+				<hr />
+
+				<h2>Popup Form</h2>
+
+				<p>You can also place your form inside a popup:</p>
+
+				<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline">Show Popup Form</a>
+
+				<div data-role="popup" id="myPopup" class="ui-content">
+				  <form method="post" action="demoform.asp">
+				    <div>
+				      <h3>Login information</h3>
+				      <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+				      <input type="text" name="user" id="usrnm" placeholder="Username">
+				      <label for="pswd" class="ui-hidden-accessible">Password:</label>
+				      <input type="password" name="passw" id="pswd" placeholder="Password">
+				    </div>
+				  </form>
+				</div>
+
+
+
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

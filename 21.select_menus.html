@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Form Select Menus</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Form Select Menus</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile - Select Menus</h2>
+
+				<p>The select-element creates a drop-down list with several options.</p>
+
+				<p>The option-elements inside the select-element define the available options in the list.</p>
+
+				<h3>Example: Select Menu</h3>
+
+				<form method="post" action="demoform.asp">
+					<fieldset class="ui-field-contain">
+						<label for="day">Select Day</label>
+						<select name="day" id="day">
+							<option value="mon">Monday</option>
+							<option value="tue">Tuesday</option>
+							<option value="wed">Wednesday</option>
+						</select>
+					</fieldset>
+				</form>
+
+				<p><strong>Tip:</strong> if you have a long list of options that are related, use the <b>optgroup-element</b> inside select.</p>
+
+				<form method="post" action="demoform.asp">
+					<fieldset class="ui-field-contain">
+						<label for="day">Select Day</label>
+						<select name="day" id="day">
+							<optgroup label="Weekdays">
+								<option value="mon">Monday</option>
+								<option value="tue">Tuesday</option>
+								<option value="wed">Wednesday</option>
+							</optgroup>
+							<optgroup label="Weekends">
+								<option value="sat">Saturnday</option>
+								<option value="sun">Sunday</option>
+							</optgroup>
+						</select>
+					</fieldset>
+				</form>
+
+				<hr />
+
+				<h2>Custom Select Menus</h2>
+
+				<p>Mobile platforms have their own way of showing a select menu.</p>
+
+				<p>If you want the select menu to display the same accross mobile devices, use the jQuery custom select menu <b>data-native-menu="false".</b></p>
+
+				<form method="post" action="demoform.asp">
+					<fieldset class="ui-field-contain">
+						<label for="day">Select Day</label>
+						<select name="day" id="day" data-native-menu="false">
+							<option value="mon">Monday</option>
+							<option value="tes">Tuesday</option>
+							<option value="wed">Wednesday</option>
+							<option value="thur">Thursday</option>
+							<option value="fri">Friday</option>
+							<option value="sat">Saturday</option>
+							<option value="sun">Sunday</option>
+						</select>
+					</fieldset>
+					<input type="submit" data-inline="true" value="Submit" />
+				</form>
+
+				<hr />
+
+				<h2>Multiple Selections</h2>
+
+				<p>To select multiple options in the select menu, use the <b>multiple</b> attribute in the select element.</p>
+
+				<div class="ui-field-contain">
+				   <label for="select-custom">Custom Select</label>
+				   <select id="select-custom" multiple="multiple" data-native-menu="false">
+				      <option value="mu">Mumbai</option>
+				      <option value="pu" selected="selected">Pune</option>
+				      <option value="be" selected="selected">Belgaum</option>
+				      <option value="ch">Chennai</option>
+				      <option value="ban">Bangalore</option>
+				   </select>
+				</div>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

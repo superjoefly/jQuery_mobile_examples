@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Navbars</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Navbars</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile - Navbars</h2>
+
+				<p>A navigation bar consists of a group of links that are aligned horizontally, typically within a header or footer.</p>
+
+				<p>The navbar is coded as a unordered list of links wrapped inside a div-element that has the data-role="navbar" attribute.</p>
+
+				<h3>Example: navbar</h3>
+
+				<div data-role="header">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="w3-panel w3-border-blue w3-leftbar w3-pale-red">
+					<p>By default, links inside a navigation bar will automatically turn into a button.</p>
+
+					<p>The buttons are, by default, as wide as its content. Use an unordered list to divide the buttons equally: 1 button takes 100% of the width, 2 buttons share 50% each, 3 buttons 33.3%, etc. However, if you specify more than 5 buttons in the navbar, it will wrap to multiple lines.</p>
+				</div>
+
+				<hr />
+
+				<h2>Icons in Navigation Buttons</h2>
+
+				<p>To add an icon to your naviagtion button, use the <b>data-icon</b> attribute.</p>
+
+				<h3>Example: icons in nav buttons</h3>
+
+				<div data-role="header">
+					<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-icon="home">Link 1</a></li>
+						<li><a href="#" data-icon="back">Link 2</a></li>
+						<li><a href="#" data-icon="search">Link 3</a></li>
+					</ul>
+					</div>
+				</div>
+
+				<p>The data-icon attribute uses the same values as the CSS classes specified in the icons chapter. The only difference is that, instead of specifying class="ui-icon-value", you specify the attribute of data-icon="value".</p>
+
+				<hr />
+
+				<h2>Positioning Icons</h2>
+
+				<p>Just like with the "ui-btn-icon-position" class (specified in the "Icons" chapter), you can choose where the icon should be positioned in the navigation button: top, right, bottom or left.</p>
+
+				<p>The icon position is set on the navbar container - it is not possible to position each individual button link. Use the <b>data-iconpos</b> attribute to specify the position:</p>
+
+				<h3>Example: icons positioned to the right</h3>
+
+				<div data-role="header">
+					<div data-role="navbar" data-iconpos="right">
+					<ul>
+						<li><a href="#" data-icon="home">Link 1</a></li>
+						<li><a href="#" data-icon="back">Link 2</a></li>
+						<li><a href="#" data-icon="search">Link 3</a></li>
+					</ul>
+					</div>
+				</div>
+
+				<p><strong>Note:</strong> by default, icons placed in nav buttons are placed above the text area (data-iconpos="top")</p>
+
+				<hr />
+
+				<h2>Active Buttons</h2>
+
+				<p>When a link in the navbar is tapped/clicked, it gets the selected (pressed down) look.</p>
+
+				<p>To achieve this without having to tap the link, use the <b>"ui-btn-active"</b> class.</p>
+
+				<h3>Example: active navbar button</h3>
+
+				<div data-role="header">
+					<div data-role="navbar" data-iconpos="right">
+					<ul>
+						<li><a href="#" data-icon="home" class="ui-btn-active">Link 1</a></li>
+						<li><a href="#" data-icon="back">Link 2</a></li>
+						<li><a href="#" data-icon="search">Link 3</a></li>
+					</ul>
+					</div>
+				</div>
+
+				<p>For multiple pages, you might want the selected look for each button that represents the page the user is on. To do so, add the <b>"ui-state-persist"</b> class to your links, as well as the "ui-btn-active" class.</p>
+
+				<h3>Example: ui-state-persist</h3>
+
+				<div data-role="header">
+					<div data-role="navbar" data-iconpos="right">
+					<ul>
+						<li><a href="#" data-icon="home" class="ui-btn-active ui-state-persist">Link 1</a></li>
+						<li><a href="#" data-icon="back">Link 2</a></li>
+						<li><a href="#" data-icon="search">Link 3</a></li>
+					</ul>
+					</div>
+				</div>
+
+				<p><strong>See next page for ui-state-persist!</strong></p>
+
+				<a href="#pagetwo" class="ui-btn">Page 2</a>
+
+
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<div data-role="header">
+					<div data-role="navbar" data-iconpos="right">
+					<ul>
+						<li><a href="#" data-icon="home" class="ui-btn-active ui-state-persist">Link 1</a></li>
+						<li><a href="#" data-icon="back">Link 2</a></li>
+						<li><a href="#" data-icon="search">Link 3</a></li>
+					</ul>
+					</div>
+				</div>
+
+				<a href="#pageone" class="ui-btn ui-icon-back ui-btn-icon-left">Back</a>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

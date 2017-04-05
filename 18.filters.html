@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Filters</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Filters</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>Filterable Elements</h2>
+
+				<p>All elements that have more than one chile element can be filtered.</p>
+
+				<p><strong>How to Create a Search Field:</strong></p>
+
+				<ul>
+					<li>The element you want to be filterable, must include the <b>data-filter="true"</b> attribute.</li>
+					<li>Create an input element with a specified id# and add the <b>data-type="search" attribute. This will create a basic search field. Wrap the input in a form, and add the <b>"ui-filterable"</b> class to the form-element...this will adjust the margin between the search field and the filterable element.</li>
+					<li>Then, add the <b>data-input</b> attribute to the filterable element. Its value must match the id# of the input element.</li>
+				</ul>
+
+				<p><strong>Tip:</strong> use a placeholder to specify a short hint that describes the expected value of the search field:</p>
+
+				<h3>Example: filterable list view</h3>
+
+				<form class="ui-filterable">
+					<input id="myFilter" data-type="search" placeholder="Search for names..." />
+				</form>
+
+				<ul data-role="listview" data-filter="true" data-input="#myFilter">
+					<li><a href="#">Adele</a></li>
+					<li><a href="#">Billy</a></li>
+					<li><a href="#">Calvin</a></li>
+				</ul>
+
+				<hr />
+
+				<h2>Custom Filter</h2>
+
+				<p>The text inside each child element is the actual text that is used for filtering (like "Adele" or "B" for "Billy").</p>
+
+				<p>However if you want to filter the search to a custom filter text instead, you can add the <b>data-filtertext</b> attribute to any child element.</p>
+
+				<form class="ui-filterable">
+					<input id="myFilter2" data-type="search" placeholder="Search for names..." />
+				</form>
+
+				<ul data-role="listview" data-filter="true" data-input="#myFilter2" data-autodividers="true" data-inset="true">
+					<li data-filtertext="fav"><a href="#">Adele</a></li>
+					<li><a href="#">Billy</a></li>
+					<li><a href="#">Calvin</a></li>
+				</ul>
+
+				<p><strong>Note:</strong> you can only find "Adele" by typing in the keywords "f, a, v or fav".</p>
+
+				<div class="w3-panel w3-leftbar w3-border-red w3-pale-blue">
+					<p>If you use the data-filtertext attribute on an element, the original text/content of that particular element is ignored for filtering (In the example above, you are no longer able to search for the list item "Adele". You can only find Adele by typing the keywords "f, a, v or fav".)</p>
+				</div>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

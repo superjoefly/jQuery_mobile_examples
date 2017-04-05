@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Page Events</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Page Events</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Events for handling pages in jQuery Mobile are divided into four categories:</p>
+
+				<ul>
+					<li>Page Initialization - before page creation, and when the page has been created</li>
+					<li>Page Load/Unload - when an external page is loading, unloading or encounters failure</li>
+					<li>Page Transition - before and after page transitions</li>
+					<li>Page Change - when pages are changed to or from, or encounters a failure</li>
+				</ul>
+
+				<p>See reference for complete list of jQuery Mobile events.</p>
+
+				<hr />
+
+				<h2>jQuery Mobile Initialization Events</h2>
+
+				<p>When a typical page in jQuery Mobile is initialized, it goes through two stages: before page creating and after page creation.</p>
+
+				<p>Each stage has an event that can be used to insert or manipulate code before or when jQuery Mobile enhances the page.</p>
+
+				<table class="w3-table-all">
+					<tr>
+						<th>Event</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>pagebeforecreate</td>
+						<td>triggered when the page is about to be initialized, and before jQuery Mobile has started enhancing the page</td>
+					</tr>
+					<tr>
+						<td>pagecreate</td>
+						<td>triggered when the page has been created, but before enhancement is complete</td>
+					</tr>
+				</table>
+
+				<h3>Example: initialization events</h3>
+
+				<p>The page has been created and enhancement has been done...refresh page for example!</p>
+
+				<hr />
+
+				<h2>jQuery Mobile Load Events</h2>
+
+				<p>Page load events are for external pages.</p>
+
+				<p>Whenever an external page is loaded into the DOM, 2 events fire. The first is pagecontainerbeforeload, and the second will be either pagecontainerload(success) or pagecontainerloadfailed(fail).</p>
+
+				<table class="w3-table-all">
+					<tr>
+						<th>Event</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>pagecontainerbeforeload</td>
+						<td>triggered before any page load request is made</td>
+					</tr>
+					<tr>
+						<td>pagecontainerload</td>
+						<td>triggered after the page has been successfully loaded and inserted into the DOM</td>
+					</tr>
+					<tr>
+						<td>pagecontainerloadfailed</td>
+						<td>triggered if the page load request fails. By default, it will show the "Error Loading Page" message</td>
+					</tr>
+				</table>
+
+				<h3>Example: load events</h3>
+
+				<a href="http://www.w3schools.com/jquerymobile/externalpage.html">External Page</a><br />
+
+				<a href="externalnoexist.html">External Page That Doesn't Exist</a>
+
+				<hr />
+
+				<h2>jQuery Mobile Transition Events</h2>
+
+				<p>We can also use events for when we transition from one page to the next.</p>
+
+				<p>Page transition involves two pages: a "from" page and a "to" page. These transitions animate the change from the current active page to a new page.</p>
+
+				<table class="w3-table-all">
+					<tr>
+						<th>Event</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>pagebeforeshow</td>
+						<td>triggered on the "to" page, before the transitiion animation starts</td>
+					</tr>
+					<tr>
+						<td>pageshow</td>
+						<td>triggered on the "to" page, after the transition animation completes</td>
+					</tr>
+					<tr>
+						<td>pagebeforehide</td>
+						<td>triggered on the "from" page, before the transition animation starts</td>
+					</tr>
+					<tr>
+						<td>pagehide</td>
+						<td>triggered on the "from" page, after the transition animation completes</td>
+					</tr>
+				</table>
+
+				<h3>Example: </h3>
+
+				<a href="#pagetwo">Go To Page Two</a>
+
+
+
+
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+				<a href="#pageone">Go Back To Page One</a>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+		<script>
+		//pagebeforecreate event
+		$(document).on("pagebeforecreate", function() {
+			alert("pagebeforecreate event fired!");
+		});
+
+		//pagecreate event
+		$(document).on("pagecreate", function() {
+			alert("pagecreate event fired!");
+		});
+
+		//pagecontainerload
+		$(document).on("pagecontainerload",function(event,data) {
+			alert("pagecontainerload event fired!\nURL: " + data.url);
+		});
+
+		//pagecontainerloadfailed
+		$(document).on("pagecontainerloadfailed", function(event,data) {
+			alert("Sorry, requested page does NOT exist.");
+		});
+
+
+		
+
+		//pagebeforeshow
+		$(document).on("pagebeforeshow","#pagetwo",function() {
+			alert("pagebeforeshow event fired - page two is about to be shown");
+		});
+
+		//pageshow
+		$(document).on("pageshow","#pagetwo",function() {
+			alert("pageshow event fired - page two is now shown");
+		});
+
+		//pagebeforhide
+		$(document).on("pagebeforehide","#pagetwo",function() {
+			alert("pagebeforehide event fired - page two is about to be hidden");
+		});
+
+		//pagehide
+		$(document).on("pagehide", "#pagetwo", function() {
+			alert("pagehide event triggered - page two is now hidden");
+		});
+		</script>
+
+
+	</body>
+
+</html>

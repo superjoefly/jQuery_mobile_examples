@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - List Views</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - List Views</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h3>jQuery Mobile - List Views</h3>
+				<p>List views in jQuery Mobile are standard HTML list; ordered lists (ol), and unordered lists (ul).</p>
+
+				<p>To create a list, apply the <b>data-role="listview"</b> to the ol or the ul elements. To make the items tappable, specify a link inside each li-element.</p>
+
+				<h3>Example: tappable li-elements</h3>
+
+				<h3>Ordered List:</h3>
+				<ol data-role="listview">
+					<li><a href="#">List Item</a></li>
+					<li><a href="#">List Item</a></li>
+					<li><a href="#">List Item</a></li>
+				</ol>
+
+				<h3>Unordered List:</h3>
+				<ul data-role="listview">
+					<li><a href="#">List Item</a></li>
+					<li><a href="#">List Item</a></li>
+					<li><a href="#">List Item</a></li>
+				</ul>
+
+				<p>To style your list with rounded corners and some margin, use the <b>data-inset="true"</b> attribute.</p>
+
+				<h3>Example: styled list</h3>
+
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#">List Item</a></li>
+					<li><a href="#">List Item</a></li>
+					<li><a href="#">List Item</a></li>
+				</ul>
+
+				<div class="w3-panel w3-leftbar w3-border-red w3-pale-blue">
+					<p>By default, links inside a list item will automatically turn into a button (no need for ui-class="btn" or data-role="button").</p>
+				</div>
+
+					<hr />
+
+					<h2>List Dividers</h2>
+
+					<p>List dividers are used to organize and group items into categories/sections.</p>
+
+					<p>To specify a list divider, add the <b>data-role="list-divider"</b> attribute to a li-element.</p>
+
+					<h3>Example: list divider</h3>
+
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider">Europe</li>
+						<li><a href="#">Norway</a></li>
+						<li><a href="#">Germany</a></li>
+					</ul>
+
+					<p>If you have an alphabetical list, (for example a phonebook), jQuery Mobile automatically adds appropriate dividers by setting the <b>data-autodividers="true"</b> attribute on the ol or ul-element.</p>
+
+					<ul data-role="listview" data-inset="true" data-autodividers="ture">
+						<li><a href="#">Adele</a></li>
+						<li><a href="#">Agnes</a></li>
+						<li><a href="#">Billy</a></li>
+						<li><a href="#">Calvin</a></li>
+					</ul>
+
+					<div class="w3-panel w3-leftbar w3-border-red w3-pale-blue">
+						<p>The data-autodividers="true" attribute creates dividers with uppercased first letters of the item's text.</p>
+					</div>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

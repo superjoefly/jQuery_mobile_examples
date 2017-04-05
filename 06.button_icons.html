@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Button Icons</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page">
+			<div data-role="header">
+				<h1>jQuery Mobile - Button Icons</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>jQuery Mobile provides a set of icons that will make your buttons look better.</p>
+
+				<hr />
+
+				<h2>Adding Icons to jQuery Mobile Buttons</h2>
+
+				<p>To add an icon to your button, use the <b>ui-icon</b> class, and position the icon with an <b>icon position class (ui-btn-icon-pos).</b></p>
+
+				<h3>Example: button icon</h3>
+
+				<pre><code>
+			/a href="#" class="ui-btn ui-icon-search ui-btn-icon-left"/ Seach /a
+				</code></pre>
+
+				<a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">Seach</a>
+
+				<p><strong>Note:</strong> For other buttons, like buttons in list views and forms, you must use the <b>data-icon</b> attribute. This will be explained in a later chapter.</p>
+
+				<h3>Some Available Icons:</h3>
+
+				<table class="w3-table-all">
+					<tr>
+						<th>Icon Class</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>ui-icon-arrow-l</td>
+						<td>left arrow</td>
+					</tr>
+					<tr>
+						<td>ui-icon-arrow-r</td>
+						<td>right arrrow</td>
+					</tr>
+					<tr>
+						<td>ui-icon-info</td>
+						<td>information</td>
+					</tr>
+					<tr>
+						<td>ui-icon-delete</td>
+						<td>delete</td>
+					</tr>
+					<tr>
+						<td>ui-icon-back</td>
+						<td>back</td>
+					</tr>
+					<tr>
+						<td>ui-icon-audio</td>
+						<td>speakers</td>
+					</tr>
+					<tr>
+						<td>ui-icon-lock</td>
+						<td>padlock</td>
+					</tr>
+					<tr>
+						<td>ui-icon-search</td>
+						<td>search</td>
+					</tr>
+					<tr>
+						<td>ui-icon-alert</td>
+						<td>alert</td>
+					</tr>
+					<tr>
+						<td>ui-icon-grid</td>
+						<td>grid</td>
+					</tr>
+					<tr>
+						<td>ui-icon-home</td>
+						<td>home</td>
+					</tr>
+				</table>
+
+				<p><strong>See jQuery Mobile Icon Ref for more!</strong></p>
+
+				<hr />
+
+				<h2>Positioning Icons</h2>
+
+				<p>You can specify one of four values for where the icon should be positioned in the button: top, right, bottom, or left.</p>
+
+				<h3>Example: positioning icons</h3>
+
+			<div data-role="controlgroup"  data-type="horizontal">
+				<a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+
+				<a href="#" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a>
+
+				<a href="#" class="ui-btn ui-icon-back ui-btn-icon-right">Back</a>
+
+				<a href="#" class="ui-btn ui-icon-audio ui-btn-icon-bottom">Audio</a>
+			</div>
+
+			<p><strong>Note:</strong> if you do not specify the icon position for link buttons, the icon will not be shown.</p>
+
+			<hr />
+
+			<h2>Displaying only the Icon</h2>
+
+			<p>To only display the icon, use <b>"notext"</b> as value for icon position:</p>
+
+			<h3>Example> "notext"</h3>
+
+			<pre><code>
+		/a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext" /a
+			</code></pre>
+
+			<a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext" style="margin: auto;"></a>
+
+			<hr />
+
+			<h2>Removing the Circle and Changing Color</h2>
+
+			<p>By default all icons have a gray circle (disc) around them. To remove the circle, add the <b>"ui-nodisc-icon"</b> class to the element or its container:</p>
+
+			<p>By default, all icons are white. To change the icon color to black, add the <b>ui-alt-icon</b> class to the element or its container.</p>
+
+			<h3>Example: black icon with no border (disc)</h3>
+
+			<pre><code>
+	a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-left ui-nodisc-icon">Without circle /a
+			</code></pre>
+
+			<a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-left ui-nodisc-icon ui-alt-icon">Without circle</a>
+
+			<div class="ui-nodisc-icon ui-alt-icon">
+				<a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">Using a Container for Styling Purposes</a>
+			</div>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

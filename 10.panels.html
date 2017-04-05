@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Panels</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+
+			<div data-role="panel" id="myPanel" data-display="push" data-position-fixed="true">
+				<h2>Panel Header</h2>
+				<p>Some text...</p>
+			</div>
+
+			<div data-role="header">
+				<h1>jQuery Mobile - Panels</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile - Panels</h2>
+
+				<p>Panels in jQuery Mobile will slide out from the left or the right side of the screen with additional content.</p>
+
+				<p>To create a panel, add the <b>data-role="panel"</b> attribute to a div-element and specify an id.</p>
+
+				<p>Add any HTML markup inside this div-element that you want to display in you panel.</p>
+
+				<h3>Example: panel</h3>
+
+				<p><strong>Note:</strong> the panel markup must be placed before or after the header and footer content, inside a jQuery Mobile page.</p>
+
+				<p>To access the panel, create a link that points to the id of the panel div-element. When a user clicks on the link, the panel will open.</p>
+
+				<a href="#myPanel" class="ui-btn ui-btn-inline">Open Panel</a>
+
+				<hr />
+
+				<h2>Closing Panels</h2>
+
+				<p>You can close the panel by clicking outside of it, by swiping or by pressing the Esc key. You can disable the clicking and swiping features by adding <b>data-*</b> attributes to the panel div-element.</p>
+
+				<table class="w3-table-all">
+					<tr>
+						<th>Attribute</th>
+						<th>Value</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>data-dismissible</td>
+						<td>true | false</td>
+						<td>specifies whether the panel can be closed by clicking outside of it or not.</td>
+					</tr>
+					<tr>
+						<td>data-swipe-close</td>
+						<td>true | false</td>
+						<td>specifies whether the panel can be closed by swiping or not</td>
+					</tr>
+				</table>
+
+				<p>You can also close the panel by using a button: Add a link inside the panel div with the <b>data-rel="close"</b> attribute attached to it. And for compatibility reasons, you should also specify the href attribute to point to the ID of the page the user should go to when closing the panel.</p>
+
+				<h3>Example: panel with close button</h3>
+
+				<div data-role="panel" id="myPanel2">
+					<h2>Panel 2 Header</h2>
+					<p>Some text...</p>
+					<a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left">Close</a>
+				</div>
+
+				<a href="#myPanel2" class="ui-btn ui-btn-inline">Open Panel</a>
+
+				<hr />
+
+				<h2>Panel Display</h2>
+
+				<p>You can control the display mode of the panel with the <b>data-display</b> attribute.</p>
+
+				<table class="w3-table-all">
+					<tr>
+						<th>Attribute Value</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>data-display="overlay"</td>
+						<td>displays the panel over the content</td>
+					</tr>
+					<tr>
+						<td>data-dispaly="push"</td>
+						<td>animates both the panel and the page at the same time (pushes page over)</td>
+					</tr>
+					<tr>
+						<td>data-display="reveal"</td>
+						<td>dafault; the panel will sit under the page and reveal as the page slides away.</td>
+					</tr>
+				</table>
+
+				<h3>Example: overlay</h3>
+
+				<div data-role="panel" id="myPanel3" data-display="overlay">
+					<h2>Panel 3 Header</h2>
+					<p>This is some text...</p>
+				</div>
+
+				<a href="#myPanel3" class="ui-btn ui-btn-inline">Open Panel</a>
+
+				<hr />
+
+				<h2>Positioning Panels</h2>
+
+				<p>By default panels will appear on the left side of the screen. For a panel to appear on the right side, specify the <b>data-position="right"</b> attribute.</p>
+
+				<h3>Example: panel on right side of screen</h3>
+
+				<a href="#myPanel4" class="ui-btn ui-btn-inline">Open Panel</a>
+
+				<p>You can also have the panel fixed to the screen using <b>data-position-fixed="true"</b> attribute. <strong>See Example 1</strong></p>
+
+			</div>
+
+
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+
+			<div data-role="panel" id="myPanel4" data-position="right" data-display="overlay">
+				<h2>Panel 4 Header</h2>
+				<p>This is some text...</p>
+			</div>
+			
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

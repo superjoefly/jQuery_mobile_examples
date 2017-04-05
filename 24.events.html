@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Events</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Events</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Events = All the different visitor actions that a webpage can respond to.</p>
+
+				<hr />
+
+				<h2>jQuery Mobile Events</h2>
+
+				<p>You can use any standard jQuery Events in jQuery Mobile.</p>
+
+				<p>In addition, jQuery Mobile offers several events that are tailor made for mobile browsing.</p>
+
+				<ul>
+					<li>Touch events - when user taps and swipes</li>
+					<li>Scroll events - when user scrolls up or down</li>
+					<li>Orientation events - when device is rotated vertically or horizontally</li>
+					<li>Page events - when page is shown, hidden, created, loaded and/or unloaded</li>
+				</ul>
+
+				<p><strong>See reference for more complete list.</strong></p>
+
+				<hr />
+
+				<h2>Initializing jQuery Mobile Events</h2>
+
+				<p>jQuery Mobile uses a <b>pagecreate event</b>, which occurs when a page has been created in the DOM, yet before enhancement is complete, to prevent code from running pre-maturely.</p>
+
+				<p>The second parameter ("#pageone") points to the id of the page to specify the events for:</p>
+
+				<h3>Example: pagecreate event</h3>
+
+				<pre><code>
+/script
+$(document).on("pagecreate", "#pageone", function() {
+	//jQuery events go here...
+});
+/script
+				</code></pre>
+
+				<p><strong>Note:</strong> the jQuery on() method is used to attach event handlers.</p>
+
+				
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

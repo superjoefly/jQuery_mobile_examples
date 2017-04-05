@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Toolbars</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Toolbars</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile Toolbars</h2>
+				<p>Toolbar elements are often placed inside headers and footers - for "easy access" navigation:</p>
+
+				<hr />
+
+				<h2>Header Bars</h2>
+
+				<p>The header is located at the top of the page and usually contains a page title/logo, or one or two buttons (typically home, options or search).</p>
+
+				<p>You can add buttons to the left and/or right side of the header.</p>
+
+				<h3>Example: header with buttons</h3>
+
+				<div data-role="header">
+					<a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+					<h1>This is a Heading!</h1>
+					<a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+				</div>
+
+				<h3>Example: header with button to left</h3>
+
+				<div data-role="header">
+					<a href="#" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left">Home</a>
+					<h1>This is a Header!</h1>
+				</div>
+
+				<h3>Example: header with button to right</h3>
+
+				<div data-role="header">
+					<h1>This is a Header!</h1>
+					<a href="#" class="ui-btn ui-btn-right ui-icon-search ui-btn-icon-left">Search</a>
+				</div>
+
+				<p><strong>Note:</strong> a header can contain one or two buttons, while a footer has no limit.</p>
+
+				<hr />
+
+				<h2>Footer Bars</h2>
+
+				<p>The footer is located at the bottom of the page.</p>
+
+				<p>The footer is more flexible than the header - it is more functional and changeable throughout pages and can therefore contain as many buttons as needed.</p>
+
+				<h3>Example: footer with buttons</h3>
+
+				<div data-role="footer">
+					<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Twitter!</a>
+					<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Facebook!</a>
+					<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Linkedn!</a>
+				</div>
+
+				<p><strong>Note:</strong> the buttons in the footer are not centered by default...to fix this use CSS:</p>
+
+				<h3>Example: centered buttons in footer bar</h3>
+
+				<div data-role="footer" style="text-align: center">
+					<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Twitter!</a>
+					<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Facebook!</a>
+					<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Linkedn!</a>
+				</div>
+
+				<p>You can also group buttons in the footer horizontally or vertically:</p>
+
+				<h3>Example: horizontal button group in footer</h3>
+
+				<div data-role="footer" style="text-align: center">
+					<div data-role="controlgroup" data-type="horizontal">
+						<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Twitter!</a>
+						<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Facebook!</a>
+						<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Linkedn!</a>
+					</div>
+				</div>
+
+				<hr />
+
+				<h2>Positioning Headers and Footers</h2>
+
+				<p>The header and footer can be positioned in three ways:</p>
+
+				<ul>
+					<li>Inline - default; header and footer are inline with page content.</li>
+					<li>Fixed - headers and footers will remain positioned at the top and bottom of the page.</li>
+					<li>Fullscreen - behaves like fixed; headers and footers will remain positioned at the top and bottom, but also over the page content. It is slightly see through.</li>
+				</ul>
+
+				<p>Use the data-position attribute to position your headers and footers.</p>
+
+				<h3>Example: fixed</h3>
+
+				<div data-role="header" data-position="fixed">
+					<div data-role="header">
+						<a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+						<h1>This is a Heading!</h1>
+						<a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+					</div>
+				</div>
+
+				<h3>Example: fullscreen</h3>
+
+				<div data-role="footer" data-position="fixed" data-fullscreen="true">
+					<div data-role="controlgroup" data-type="horizontal">
+						<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Twitter!</a>
+						<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Facebook!</a>
+						<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Linkedn!</a>
+					</div>
+				</div>
+
+				<p><strong>Tip:</strong> the fullscreen position is ideal for photos, images and video.</p>
+
+				<p><strong>Tip:</strong> tapping the screen will hide and show footers and headers for both fixed and fullscreen positions.</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

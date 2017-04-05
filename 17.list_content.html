@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - List Content</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Content</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile List Icons</h2>
+
+				<p>The default icon for each list item containing a link is a "carat-r" (right arrow). To change this to another icon, use the <b>data-icon</b> attribute on the list item you want to modifiy.</p>
+
+				<h3>Example: changing list Icons</h3>
+
+				<ul data-role="listview">
+					<li><a href="#">Default is right arrow.</a></li>
+					<li data-icon="plus"><a href="#">data-icon="plus"</a></li>
+					<li data-icon="minus"><a href="#">data-icon="minus"</a></li>
+					<li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+					<li data-icon="location"><a href="#">data-icon="location"</a></li>
+					<li data-icon="false"><a href="#">data-icon="false"</a></li>
+				</ul>
+
+				<p><strong>Note:</strong> data-icon="false" will remove the icon.</p>
+
+				<hr />
+
+				<h2>16X16 Icons</h2>
+
+				<p>To add a standard 16 X 16px icon to your list, add an img-element inside the link with a class of "ui-li-icon":</p>
+
+				<h3>Example: 16 X 16px Icon</h3>
+
+				<ul data-role="listview">
+					<li data-icon="location"><a href="#"><img src="../images/us.jpg" alt="USA" class="ui-li-icon" />USA</a></li>
+				</ul>
+
+				<hr />
+
+				<h2>jQuery Mobile List Thumbnails</h2>
+
+				<p>For images larger than 16 X 16px, add an img-element inside the list item as the <b>first-child</b> element (with no class name).</p>
+
+				<ul data-role="listview">
+					<li><a href="#"><img src="../images/us.jpg" /></a></li>
+				</ul>
+
+				<p>Use standard HTML to fill the list with information.</p>
+
+				<ul data-role="listview">
+					<li>
+						<a href="#">
+							<img src="../images/us.jpg" />
+							<h2>USA</h2>
+							<p>The USA is and Awesome Country!</p>
+						</a>
+					</li>
+				</ul>
+
+				<hr />
+
+				<h2>Split Buttons</h2>
+
+				<p>To create a split list with a vertical divider bar, place two links inside the li-element.</p>
+
+				<p>jQuery Mobile will automatically place the second link on the right side of the list with a right arrow-icon. The text inside the link, if any, will show when the user hovers over the icon.</p>
+
+				<h3>Example: split button</h3>
+
+				<ul data-role="listview" data-inset="true">
+					<li data-role="divider">Browser</li>
+					<li>
+						<a href="#"><img src="../images/chrome.png" />
+							<h2>Google Chrome</h2>
+							<p>Google Chrome Borwser Download</p>
+						</a>
+						<a href="#download" data-transition="pop" data-icon="gear">Download Browser</a>
+					</li>
+				</ul>
+
+				<hr />
+
+				<h2>Count Bubbles</h2>
+
+				<p>Count bubbles are used to display numbers associated with list items, such as messages in a mailbox.</p>
+
+				<p>To add count bubbles, use an inline element, such as span, with a class of <b>ui-li-count</b> and add a number:</p>
+
+				<h3>Example:</h3>
+
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#">Inbox<span class="ui-li-count">25</span></a></li>
+					<li><a href="#">Sent<span class="ui-li-count">432</span></a></li>
+					<li><a href="#">Trash<span class="ui-li-count">7</span></a></li>
+				</ul>
+
+				<p><strong>Note:</strong> to show the correct number in a count bubble, it must be updated programmatically. Explained in later chapter.</p>
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="download" data-dialog="true">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<a href="#pageone" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-inline ui-shadow ui-corner-all ui-btn-inline ui-min">Cancel</a>
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

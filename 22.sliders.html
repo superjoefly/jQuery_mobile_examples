@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Form Sliders</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Form Sliders</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile - Form Sliders</h2>
+
+				<p>A slider allows you to select a value from a range of numbers.</p>
+
+				<p>To create a slider, use <b>input type="range"</b></p>
+
+				<h3>Example: slider</h3>
+
+				<form method="post" action="#">
+					<label for="points">Points</label>
+					<input type="range" name="points" id="points" value="50" min="0" max="100" />
+				</form>
+
+				<p>Use the following attributes to specify restrictions:</p>
+
+				<ul>
+					<li>max - maximum value allowed</li>
+					<li>min - minimum value allowed</li>
+					<li>step - legal number intervals</li>
+					<li>value - dafault value</li>
+				</ul>
+
+				<p><strong>Tip:</strong> If you'd rather show the value on the slider button, add <b>data-show-value="true".</b></p>
+
+				<form method="post" action="#">
+					<label for="points">Points</label>
+					<input type="range" data-show-value="true" name="points" id="points" value="50" min="0" max="100" />
+				</form>
+
+				<p><strong>Tip:</strong> if you want the value to popup on your screen like a tooltip (as you slide), add <b>data-popup-enabled="true".</b></p>
+
+				<form method="post" action="#">
+					<label for="points">Points</label>
+					<input type="range" data-popup-enabled="true" name="points" id="points" value="50" min="0" max="100" />
+				</form>
+
+				<p><strong>Tip:</strong> if you want to highlight the track up to the slider value, add <b>data-highlight="true".</b></p>
+
+				<form method="post" action="#">
+					<label for="points">Points</label>
+					<input type="range" data-popup-enabled="true" data-highlight="true" name="points" id="points" value="50" min="0" max="100" />
+				</form>
+
+				<hr />
+
+				<h2>Flip Toggle Switch</h2>
+
+				<p>A flip switch is often used for on/off buttons:</p>
+
+				<p>To create a flip switch, use <b>input type="checkbox"</b> and specify a <b>data-role="flipswitch".</b></p>
+
+				<form method="post" action="#">
+					<label for="switch">Flip Toggle Switch</label>
+					<input type="checkbox" data-role="flipswitch" name="switch" id="switch" /><br />
+					<input type="submit" data-inline="true" value="submit" />
+				</form>
+
+				<p>By default the text on the flip switch is "On" and "Off". Use the <b>data-on-text</b> and <b>data-off-text</b> attributes to change this.</p>
+
+				<form method="post" action="#">
+					<label for="switch">Flip Toggle Switch</label>
+					<input type="checkbox" data-role="flipswitch" name="switch" id="switch" data-on-text="true" data-off-text="false" /><br />
+					<input type="submit" data-inline="true" value="submit"  />
+				</form>
+
+				<p>Use the "checked" attribute to set one of the options to be pre-selected.</p>
+
+				<form method="post" action="#">
+					<label for="switch">Flip Toggle Switch</label>
+					<input type="checkbox" data-role="flipswitch" name="switch" id="switch" checked/><br />
+					<input type="submit" data-inline="true" value="submit" />
+				</form>
+
+
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Scroll Events</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile - Scroll Events</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>jQuery Mobile provides two scroll events: when scrolling starts, and when scrolling stops.</p>
+
+				<hr />
+
+				<h2>jQuery Mobile Scrollstart</h2>
+
+				<p>The scrollstart event is triggered when the user starts to scroll the page:</p>
+
+				<h3>Example: alert message on scrollstart</h3>
+
+				<p><strong>Applied to document!</strong></p>
+
+				<p><strong>Note:</strong> may not work on iOS</p>
+
+				<hr />
+
+				<h2>jQuery Mobile Scroll Stop</h2>
+
+				<p>The scrollstop event is triggered when the user stops to scroll the page.</p>
+
+				<h3>Example: alert message on scrollstop</h3>
+
+				<p><strong>Applied to document!</strong></p>
+
+
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+		<script>
+
+		//alert message on scrollstart
+		$(document).on("scrollstart", function() {
+			alert("Started Scrolling!");
+		});
+
+		//alert message on scrollstop
+		$(document).on("scrollstop", function() {
+			alert("Stopped Scrolling!");
+		});
+
+		</script>
+
+
+	</body>
+
+</html>

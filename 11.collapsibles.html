@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Collapsibles</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone" >
+			<div data-role="header">
+				<h1>jQuery Mobile - Collapsibles</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>Collapsible Content Block</h2>
+
+				<p>Collapsibles allows you to hide or show content, which is useful for storing parts of information.</p>
+
+				<p>To create a collapsible block of content, assign the <b>data-role="collapsible"</b> attribute to a container. Inside the container (div), and a header (h2 etc.) or legend element, followed by any HTML markup you want to be expanded.</p>
+
+				<h2>Example: collapsible</h2>
+
+				<div data-role="collapsible">
+					<h2>Click Me...I'm collapsible!</h2>
+					<p>I'm the collapsible/expanded content...</p>
+				</div>
+
+				<p>By default the content is closed. To expand the content when the page loads, use data-collapsed="false".</p>
+
+				<h3>Example: data-collapsed="false"</h3>
+
+				<div data-role="collapsible" data-collapsed="false">
+					<h2>Click me...I'm collapsible!</h2>
+					<p>I'm now expanded by default.</p>
+				</div>
+
+				<hr />
+
+				<h2>Nested Collapsible Blocks</h2>
+
+				<p>Collapsible content blocks can be nested (a collapsible inside a collapsible).</p>
+
+				<h3>Example: nested collapsible</h3>
+
+				<div data-role="collapsible">
+					<h2>Click me...I'm collapsible!</h2>
+					<p>This is some text!!!</p>
+					<div data-role="collapsible">
+						<h2>This is a nested collapsible div!</h2>
+						<p>Wow! That's awesome!</p>
+					</div>
+				</div>
+
+				<p><strong>Note:</strong> collapsible content blocks can be nested as many times as you want.</p>
+
+				<hr />
+
+				<h2>Collapsible Sets</h2>
+
+				<p>Collapsible sets are collapsible blocks that are grouped together (often referred to as an accordion). When a new block is opened, all other blocks close.</p>
+
+				<p>Create several collapsible content blocks, and then wrap a new container with the <b>data-role="collapsibleset"</b> arround the collapsible blocks.</p>
+
+				<h2>Example: accordion</h2>
+
+				<div data-role="collapsibleset">
+				<div data-role="collapsible">
+					<h2>Click me I'm collapsible!</h2>
+					<p>This is some text!</p>
+				</div>
+				<div data-role="collapsible">
+					<h2>Click me I'm collapsible!</h2>
+					<p>This is some text!</p>
+				</div>
+				<div data-role="collapsible">
+					<h2>Click me I'm collapsible!</h2>
+					<p>This is some text!</p>
+				</div>
+				</div>
+
+			</div>
+
+
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile Buttons</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="page1">
+			<div data-role="header">
+				<h1>jQuery Mobile Buttons</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Mobile applications are built on the simplicity of tapping things you'd want to display.</p>
+
+				<hr />
+
+				<h2>Creating a Button in jQuery Mobile</h2>
+
+				<p>A button in jQuery Mobile can be created in three ways:</p>
+
+				<ul>
+					<li>using the <b>input-element</b></li>
+					<li>using the <b>button-element</b> with <b>class="ui-btn"</b></li>
+					<li>using the <b>a-element</b> with <b>class="ui-btn"</b></li>
+				</ul>
+
+				<h3>Example: input button</h3>
+
+				<input type="button" value="Input Button" />
+
+				<h3>Example: button button</h3>
+
+				<button class="ui-btn">Button Button</button>
+
+				<h3>Example: anchor button</h3>
+
+				<a href="#" class="ui-btn">Link Button</a>
+
+				<div class="w3-panel w3-border-orange w3-leftbar">
+					<p>Buttons in jQuery Mobile are automatically styled, making them attractive and useable on both mobile devices and desktop computers. We recommend that you <b>use the a-element with class="ui-btn" to link between pages, and input or button-elements for form submission.</b></p>
+
+					<p><b>Note:</b> Before version 1.4, we used the data-role="button" attribute to create a button in jQuery Mobile. As of 1.4, the framework uses CSS classes to style buttons (except for input-buttons).</p>
+				</div>
+
+				<hr />
+
+				<h2>Navigation Buttons</h2>
+
+				<p>To link between pages using buttons, use the a-element with class="ui-btn":</p>
+
+				<h3>Example: use link button to link to page two</h3>
+
+				<a href="#page2" class="ui-btn" data-transition="flip">Go To Page Two</a>
+
+				<hr />
+
+				<h2>Grouped Buttons</h2>
+
+				<p>jQuery Mobile provides an easy way for grouping buttons together.</p>
+
+				<p>Use the <b>data-role="controlgroup"</b> attribute together with <b>data-type="horizontal|vertical"</b> in a container element, to specify whether the group buttons are aligned horizontally or vertically:</p>
+
+				<h3>Example: horizontal button group</h3>
+
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="#" class="ui-btn">Button 1</a>
+					<a href="#" class="ui-btn">Button 2</a>
+					<a href="#" class="ui-btn">Button 3</a>
+				</div>
+
+				<h3>Example: vertical button group</h3>
+
+				<div data-role="controlgroup" data-type="vertical">
+					<a href="#" class="ui-btn">Button 1</a>
+					<a href="#" class="ui-btn">Button 2</a>
+					<a href="#" class="ui-btn">Button 3</a>
+				</div>
+
+				<p>By default, grouped button are grouped vertically with no margins and no space between them. Also, only the first and last button have rounded corners...this creates a nice look when grouped together.</p>
+
+				<hr />
+
+				<h2>Back Buttons</h2>
+
+				<p>To create a Back Button, use the <b>data-rel="back"</b> attribute (<b>Note:</b> this will override the anchor's href value):</p>
+
+				<h3>Example: back button (see page two for example!)</h3>
+
+				<hr />
+
+				<h2>Inline Buttons</h2>
+
+				<p>By default, buttons take up the full width of the screen. If you want a button that is only as wide as its content, or if you want two or more buttons to appear side by side, add <b>class="ui-btn-inline"</b>:</p>
+
+				<h3>Example: inline button</h3>
+
+				<a href="#" class="ui-btn ui-btn-inline">Inline Button</a>
+				<a href="#" class="ui-btn ui-btn-inline">Inline Button 2</a>
+
+				<hr />
+
+				<h2>More CSS Classes for Link Buttons</h2>
+
+				<div class="w3-panel w3-border-blue w3-leftbar">
+					<table class="w3-table-all">
+						<tr>
+							<th>Class</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td>ui-btn-b</td>
+							<td>Chages background to black with white text</td>
+						</tr>
+						<tr>
+							<td>ui-corner-all</td>
+							<td>Adds rounded corners to the button</td>
+						</tr>
+						<tr>
+							<td>ui-mini</td>
+							<td>Makes the buttons smaller</td>
+						</tr>
+						<tr>
+							<td>ui-shadow</td>
+							<td>Adds shadow to the buttons</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="w3-panel w3-border-green w3-pale-green w3-rightbar">
+					<p>If you want to use more than one class, separate each class with a space, like: class="ui-btn ui-btn-inline ui-btn-corner-all ui-shadow"</p>
+					<p>By default, input buttons have shadow and rounded corners. The anchor and button elements do not.</p>
+				</div>
+
+				<p>For a complete reference of CSS classes for common styles, visit our jQuery Mobile CSS Classes Reference.</p>
+
+			</div>
+			<!-- End Page One -->
+
+
+			<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" id="page2">
+			<div data-role="header">
+				<h1>This is Page Two</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Main Content Area</p>
+				<a href="#page1" class="ui-btn" data-transition="flip" data-direction="reverse">Back to Page One</a>
+
+				<br /><br />
+
+				<h3>Example: back button</h3>
+				<a href="#" class="ui-btn" data-rel="back">Go Back!</a>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer Content</h1>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>

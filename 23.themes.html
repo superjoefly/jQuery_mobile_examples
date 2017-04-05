@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>jQuery Mobile - Themes</title>
+		<meta charset="UTF-8">
+
+		<!-- Viewport Rendering -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Mobile CSS -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+		<!-- jQuery Core -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- jQuery Moble JS -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+	  <style>
+		.ui-bar-f {
+			color: navy;
+			background-color: beige;
+		}
+
+		.ui-body-f {
+			background-color: cornflowerblue;
+			color: beige;
+		}
+
+		.ui-page-theme-f {
+			font-weight: bold;
+			background-color: grey;
+		}
+
+
+
+
+	  </style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header" data-theme="b">
+				<a href="#" class="ui-btn ui-btn-b">Home</a>
+				<h1>jQuery Mobile - Themes</h1>
+				<a href="#" class="ui-btn ui-btn-b">Search</a>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<h2>jQuery Mobile - Themes</h2>
+
+				<p>jQuery Mobile provides two different style themes, "a" and "b" - each with different colors for buttons, bars, content blocks and so on.</p>
+
+				<p>To customize the look of your application, use the <b>data-theme</b> attribute, and assign the attribute with a letter.</p>
+
+				<ul>
+					<li>a - black text on light gray</li>
+					<li>b - white text on dark gray</li>
+				</ul>
+			</div>
+
+			<p>For buttons with class="ui-btn", use the "ui-btn-a | b" class to style the button either gray or black.</p>
+
+			<p><strong>The "a" theme is used for most elements, and child elements often inherit the theme of its parent (or page).</strong></p>
+
+			<hr />
+
+			<h2>Themeing Header and Footer</h2>
+
+			<h3>Example: see above (this page)</h3>
+
+			<hr />
+
+			<h2>Themeing Header and Footer in Dialogs</h2>
+
+			<h3>Example: see page two!</h3>
+
+			<a href="#pagetwo" class="ui-btn ui-btn-inline">Page Two</a>
+
+			<hr />
+
+			<h2>Themeing Buttons</h2>
+
+			<h3>Example: themeing buttons</h3>
+
+			<a href="#" class="ui-btn ui-btn-b">Black Button</a>
+
+			<hr />
+
+			<h2>Theming Icons</h2>
+
+			<h3>Example: theming icons</h3>
+
+			<a href="#" class="ui-btn ui-btn-b ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">Search</a>
+
+			<hr />
+
+			<h2>Theming Popups</h2>
+
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-b ui-btn-inline ui-corner-all">Show Popup</a>
+
+	   <div data-role="popup" id="myPopup" class="ui-content" data-theme="b">
+	      <a href="#" data-rel="back" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+	      <p>I am a themed popup!.</p>
+	      <p>I have a close button at the top right corner.</p>
+	      <p><b>Tip:</b> You can also click outside to close me.</p>
+    </div>
+
+		<hr />
+
+		<h2>Theming Buttons in Header and Footer</h2>
+
+		<h3>Example: themed buttons in header and footer (see header and footer of this page)</h3>
+
+		<hr />
+
+		<h2>Theming Nav Bars</h2>
+
+		<h3>Example:</h3>
+
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="home" data-theme="b">Button 1</a></li>
+				<li><a href="#" data-icon="arrow-l">Button 2</a></li>
+				<li><a href="#" data-icon="arrow-r">Button 3</a></li>
+				<li><a href="#" data-icon="search" data-theme="b">Button 4</a></li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<h2>Theming Panels</h2>
+
+		<h3>Example:</h3>
+
+			<a href="#myPanel" class="ui-btn ui-btn-b ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+
+		<hr />
+
+		<h2>Theming Collapsible Button and Content</h2>
+
+		<h3>Example:</h3>
+
+		<div data-role="collapsible" data-theme="b" data-content-theme="b">
+			<h1>Click me...I'm collapsible!</h1>
+			<p>I'm the expanded content!</p>
+		</div>
+
+		<hr />
+
+		<h2>Adding Themes</h2>
+
+		<p>jQuery Mobile also lets you add new themes to your pages.</p>
+
+		<p>Add or edit new themes by editing the CSS file (if you have downloaded jQuery Mobile). Just copy a block of styles and rename the classes with a letter name (c-z), and adjust colors and fonts as you like.</p>
+
+		<p>You can also add new styles by using theme classes in the HTML document - add the class <b>"ui-bar-(a-z)"</b> for toolbars, <b>"ui-body-(a-z)"</b> for the content and <b>"ui-page-theme-(a-z)"</b> for the page.</p>
+
+		<h3>Example: customize theme (page 3)</h3>
+
+		<a href="#pagethree" class="ui-btn ui-btn-inline ui-btn-icon-right ui-icon-arrow-r">Page Three</a>
+
+
+		<p><strong>See W3Schools or jQuery Mobile Site for more Demos.</strong></p>
+
+
+		<div data-role="footer">
+				<h1>Footer Info Goes Here</h1>
+				<a href="#" class="ui-btn ui-btn-right ui-btn-b">Add Me On FaceBook</a>
+			</div>
+
+			<div data-role="panel" id="myPanel" data-theme="b">
+				<h2>Panel Header</h2>
+				<p>I'm a themed panel!</p>
+			</div>
+		</div>
+
+
+
+
+		<div data-role="page" data-dialog="true" id="pagetwo">
+			<div data-role="header" data-theme="b">
+				<h1>Header Info Goes Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Page Content Goes Here</p>
+
+				<a href="#pageone" class="ui-btn ui-icon-back ui-btn-icon-left">Back to Page One</a>
+			</div>
+
+			<div data-role="footer" data-theme="b">
+				<h1>Footer Info Goes Here</h1>
+			</div>
+		</div>
+
+
+
+
+
+		<div data-role="page" data-theme="f" id="pagethree">
+			<div data-role="header" data-theme="f">
+				<h2>This is a header!</h2>
+			</div>
+			<div data-role="main" class="ui-content ui-body-f">
+				<p>This is the main content area.</p>
+				<a href="#pageone" class="ui-btn ui-btn-icon-left ui-icon-arrow-l">Back</a>
+			</div>
+			<div data-role="footer">
+				<h2>Footer Content</h2>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>
