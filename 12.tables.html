@@ -21,7 +21,19 @@
 		<!-- W3.CSS -->
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
+		<!-- Prism.js for Code Snippets -->
+		<link rel="stylesheet" href="prism.css" />
+		<script src="prism.js"></script>
+
 	  <style>
+
+		.ui-header .ui-title {
+			white-space: normal;
+		}
+
+		.ui-li-static {
+			white-space: normal !important;
+		}
 
 		#myTable2 tr{
 			border-bottom: 2px solid grey;
@@ -99,8 +111,8 @@
 
 				<p>To create a column toggle table, add the following to the table element:</p>
 
-				<pre><code>
-			/table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable"/
+				<pre><code class="language-html">
+			&lt;table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable"&gt;...&lt;/table&gt;
 				</code></pre>
 
 				<p>By default, jQuery Mobile will hide columns from the right side of the table. However, you are allowed to specify which column that should be hidden or shown in a specific order. Add the <b>data-priority</b> attribute to the table's header (<th>) and specify a number between 1 (highest priority) to 6 (lowest priority) for each th-element:</p>

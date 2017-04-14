@@ -21,7 +21,19 @@
 		<!-- W3.CSS -->
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
+		<!-- Prism.js for Code Snippets -->
+		<link rel="stylesheet" href="prism.css" />
+		<script src="prism.js"></script>
+
 	  <style>
+
+		.ui-header .ui-title {
+			white-space: normal;
+		}
+
+		.ui-li-static {
+			white-space: normal !important;
+		}
 
 	  </style>
 
@@ -130,29 +142,29 @@
 
 				<h3>Example code: horizontal buttons</h3>
 
-				<pre><code>
-		/fieldset data-role="controlgroup" data-type="horizontal"/
+				<pre><code class="language-html">
+		&lt;fieldset data-role="controlgroup" data-type="horizontal"&gt;&lt;/fieldset&gt;
 				</code></pre>
 
 				<p>You can also wrap a field container around the fieldset element.</p>
 
 				<h3>Example: ui-field-contain</h3>
 
-				<pre><code>
-		/div class="ui-field-container"/
-			/fieldset data-role="controlgroup"/
-				/legend/ Chose your gender.../legend/
-			/fieldset
-		/div
+				<pre><code class="language-html">
+					&lt;div class="ui-field-container"&gt;<br />
+						&lt;fieldset data-role="controlgroup"&gt;<br />
+							&lt;legend&gt; Chose your gender...&lt;/legend&gt;<br />
+						&lt;/fieldset&gt;<br />
+					&lt;/div&gt;
 				</code></pre>
 
 				<hr />
 
 				<p>If you want one of the buttons to be pre-selected, use the HTML input "checked" attribute:</p>
 
-				<pre><code>
-		/input type="radio" checked /
-		/input type="checkbox" checked /
+				<pre><code class="language-html">
+					&lt;input type="radio" checked/&gt;<br />
+					&lt;input type="checkbox" checked/&gt;
 				</code></pre>
 
 				<hr />

@@ -20,7 +20,20 @@
 
 		<!-- W3.CSS -->
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+		<!-- Prism.js for Code Snippets -->
+		<link rel="stylesheet" href="prism.css" />
+		<script src="prism.js"></script>
+
 	  <style>
+
+		.ui-header .ui-title {
+			white-space: normal;
+		}
+
+		.ui-li-static {
+			white-space: normal !important;
+		}
 
 	  </style>
 
@@ -42,6 +55,12 @@
 				<p>To create a dialog box that opens when a user taps on a link, add data-dialog="true" to the page you want displayed as a dialog.</p>
 
 				<a href="#pagetwo">Go to Dialog Page</a>
+
+				<p>Here is the code for page two:</p>
+
+				<pre><code class="language-html">
+					&lt;div data-role="page" data-dialog="true" id="pagetwo"&gt;&lt;/div&gt;
+				</code></pre>
 			</div>
 
 			<div data-role="footer">

@@ -21,8 +21,18 @@
 		<!-- W3.CSS -->
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
-	  <style>
+		<!-- Prism.js for Code Snippets -->
+		<link rel="stylesheet" href="prism.css" />
+		<script src="prism.js"></script>
 
+	  <style>
+		.ui-header .ui-title {
+			white-space: normal;
+		}
+
+		.ui-li-static {
+			white-space: normal !important;
+		}
 	  </style>
 
 	</head>
@@ -43,7 +53,7 @@
 
 				<p>A button in jQuery Mobile can be created in three ways:</p>
 
-				<ul>
+				<ul data-role="listview">
 					<li>using the <b>input-element</b></li>
 					<li>using the <b>button-element</b> with <b>class="ui-btn"</b></li>
 					<li>using the <b>a-element</b> with <b>class="ui-btn"</b></li>
@@ -62,7 +72,7 @@
 				<a href="#" class="ui-btn">Link Button</a>
 
 				<div class="w3-panel w3-border-orange w3-leftbar">
-					<p>Buttons in jQuery Mobile are automatically styled, making them attractive and useable on both mobile devices and desktop computers. We recommend that you <b>use the a-element with class="ui-btn" to link between pages, and input or button-elements for form submission.</b></p>
+					<p>Buttons in jQuery Mobile are automatically styled, making them attractive and useable on both mobile devices and desktop computers. It is best to <b>use the a-element with class="ui-btn" to link between pages, and input or button-elements for form submission.</b></p>
 
 					<p><b>Note:</b> Before version 1.4, we used the data-role="button" attribute to create a button in jQuery Mobile. As of 1.4, the framework uses CSS classes to style buttons (except for input-buttons).</p>
 				</div>
@@ -156,7 +166,7 @@
 					<p>By default, input buttons have shadow and rounded corners. The anchor and button elements do not.</p>
 				</div>
 
-				<p>For a complete reference of CSS classes for common styles, visit our jQuery Mobile CSS Classes Reference.</p>
+				<p>For a complete reference of CSS classes for common styles, visit the jQuery Mobile CSS Classes Reference on W3Schools.</p>
 
 			</div>
 			<!-- End Page One -->

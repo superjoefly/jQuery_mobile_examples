@@ -21,7 +21,19 @@
 		<!-- W3.CSS -->
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
+		<!-- Prism.js for Code Snippets -->
+		<link rel="stylesheet" href="prism.css" />
+		<script src="prism.js"></script>
+
 	  <style>
+
+		.ui-header .ui-title {
+			white-space: normal;
+		}
+
+		.ui-li-static {
+			white-space: normal !important;
+		}
 
 	  </style>
 
@@ -48,13 +60,13 @@
 
 				<p>The transition effect can be applied to any link or form submission by using the data-transition attribute:</p>
 
-				<pre><code>
-		/a href="#anylink" data-transition="slide">Slide to Page Two /a
-				</code></pre>
+		<pre><code class="language-html">
+			&lt;a href="#anylink" data-transition="slide"&gt;Slide to Page Two&lt;/a&gt;
+		</code></pre>
 
 				<p>The following available transitions can be used with the data-transition attribute for both pages and dialogs:</p>
 
-				<ul>
+				<ul data-role="listview">
 					<li><b>fade:</b> default; fades to next page</li>
 					<li><b>flip:</b> flips to next page from back to front</li>
 					<li><b>flow:</b> throws the current page away and comes in with the next page</li>
@@ -73,8 +85,8 @@
 			</div>
 
 			<a href="#pagetwo" data-transition="slide">Slide to Page 2</a>
-			<pre><code>
-		data-transition="slide"
+			<pre><code class="language-html">
+		&lt;a href="#pagetwo" data-transition="slide"&gt;Slide to Page 2&lt;/a&gt;
 			</code></pre>
 
 			<div data-role="footer">
@@ -90,14 +102,14 @@
 			<div data-role="main" class="ui-content">
 				<p>Page Content Goes Here</p>
 				<a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page 1 (reverse)</a>
-				<pre><code>
-			data-transition="slide" data-direction="reverse"
+				<pre><code class="language-html">
+			&lt;a href="#pageone" data-transition="slide" data-direction="reverse"&gt;Slide to Page 1 (reverse)&lt;/a&gt;
 				</code></pre>
 				<br /><br />
 
 				<a href="#pagethree" data-transition="flip">Flip to Page Three</a>
-				<pre><code>
-			data-transition="flip"
+				<pre><code class="language-html">
+			&lt;a href="#pagethree" data-transition="flip"&gt;Flip to Page Three&lt;/a&gt;
 				</code></pre>
 
 			</div>
@@ -115,8 +127,8 @@
 			<div data-role="main" class="ui-content">
 				<p>This is the main content of the page!</p>
 				<a href="#pagetwo" data-transition="turn" data-direction="reverse">Turn Back to Page Two (reverse)</a>
-				<pre><code>
-			data-transition="turn" data-direction="reverse"
+				<pre><code class="language-html">
+			&lt;a href="#pagetwo" data-transition="turn" data-direction="reverse"&gt;Turn Back to Page Two (reverse)&lt;/a&gt;
 				</code></pre>
 			</div>
 

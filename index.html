@@ -21,7 +21,22 @@
 		<!-- W3.CSS -->
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
+		<!-- Styles for Navbar -->
+		<link rel="stylesheet" href="styles.css" />
+
+		<!-- Prism.js for Code Snippets -->
+		<link rel="stylesheet" href="prism.css" />
+		<script src="prism.js"></script>
+
 	  <style>
+
+		.ui-header .ui-title {
+			white-space: normal;
+		}
+
+		.ui-li-static {
+			white-space: normal !important;
+		}
 
 	  </style>
 
@@ -30,8 +45,8 @@
 	<body>
 
 		<div data-role="page" id="pageone">
-			<div data-role="header">
-				<h1 class="w3-xlarge">jQuery Mobile Notes and Examples</h1>
+			<div data-role="header" data-theme=b>
+				<h1 class="w3-large">jQuery Mobile Notes and Examples</h1>
 			</div>
 
 			<div data-role="main" class="ui-content">
@@ -108,10 +123,23 @@
 
 			</div>
 
-			<div data-role="footer">
+			<div data-role="footer" data-theme = b>
 				<h1>Created By SuperJoeFly</h1>
+				<nav id="navbar">
+					<ul>
+						<li><a href="../../../index.html" rel="external">Home</a></li>
+						<li><a href="../../resume/resume.html" rel="external">Resume</a></li>
+						<li><a href="../../portfolio/portfolio.html" rel="external">Portfolio</a></li>
+						<li><a href="../projects.html" rel="external">Projects</a></li>
+						<li><a href="../../about/about.html" rel="external">About</a></li>
+
+						<!-- <li><a href="../../photography/photography.html" rel="external">Photography</a></li> -->
+					</ul>
+				</nav>
 			</div>
 		</div>
+
+
 
 
 		<!-- Page Two -->
@@ -129,6 +157,7 @@
 				<h1>Footer Info Goes Here</h1>
 			</div>
 		</div> -->
+
 
 	</body>
 
